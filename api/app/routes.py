@@ -1,4 +1,5 @@
 from fastapi import APIRouter, Form
+from fastapi.responses import RedirectResponse
 from db import get_connection
 
 router = APIRouter()
@@ -36,12 +37,4 @@ def create_adresse(
     cursor.close()
     conn.close()
 
-    return {
-        "message": "Adresse ajoutée avec succès",
-        "data": {
-            "numero_rue": numero_rue,
-            "nom_rue": nom_rue,
-            "ville": ville,
-            "code_postal": code_postal
-        }
-    }
+    return RedirectResponse(url="/user", status_code=303)
