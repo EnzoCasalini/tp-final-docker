@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head><title>Front Utilisateur</title></head>
+  <body>
+    <h1>Liste des adresses</h1>
+    <ul id="adresses"></ul>
+
+    <script>
+      fetch('/api/user/adresses')
+        .then(res => res.json())
+        .then(data => {
+          const list = document.getElementById('adresses');
+          data.forEach(addr => {
+            const li = document.createElement('li');
+            li.textContent = `${addr.numero_rue} ${addr.nom_rue}, ${addr.code_postal} ${addr.ville}`;
+            list.appendChild(li);
+          });
+        });
+    </script>
+  </body>
+</html>
