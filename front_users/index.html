@@ -1,9 +1,18 @@
 <!DOCTYPE html>
 <html>
-  <head><title>Front Utilisateur</title></head>
+  <head>
+    <title>Front Utilisateur</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
   <body>
-    <h1>Liste des adresses</h1>
-    <ul id="adresses"></ul>
+    <div class="form-container">
+      <div class="form-panel">
+        <div class="form-content">
+          <h1 class="form-title">Liste des adresses</h1>
+          <ul id="adresses"></ul>
+        </div>
+      </div>
+    </div>
 
     <script>
       fetch('/api/user/adresses')

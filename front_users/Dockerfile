@@ -1,2 +1,3 @@
 FROM nginx:1.25.3-alpine
-COPY index.html /usr/share/nginx/html/index.html
+COPY . /usr/share/nginx/html
+RUN chmod -R 755 /usr/share/nginx/html

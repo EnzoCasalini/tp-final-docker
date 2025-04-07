@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head><title>Front Admin</title></head>
+  <head><title>Front Admin</title>
+  <link rel="stylesheet" href="./style.css" />
+  </head>
   <body>
-    <h1>Admin - Ajouter une adresse</h1>
-    <form method="POST" action="/api/admin/adresses">
-      <input name="numero_rue" placeholder="Numéro de rue" /><br/>
-      <input name="nom_rue" placeholder="Nom de la rue" /><br/>
-      <input name="ville" placeholder="Ville" /><br/>
-      <input name="code_postal" placeholder="Code postal" /><br/>
-      <button type="submit">Ajouter</button>
-    </form>
+    <div class="form-container">
+      <div class="form-panel">
+        <div class="form-content">
+          <h1 class="form-title">Admin - Ajouter une adresse</h1>
+          <form method="POST" action="/api/admin/adresses">
+            <div class="form-field">
+              <input name="numero_rue" placeholder="Numéro de rue" /><br/>
+            </div>
+            <div class="form-field">
+              <input name="nom_rue" placeholder="Nom de la rue" /><br/>
+            </div>
+            <div class="form-field">
+              <input name="ville" placeholder="Ville" /><br/>
+            </div>
+            <div class="form-field">
+              <input name="code_postal" placeholder="Code postal" /><br/>
+            </div>
+            <button type="submit" class="submit-button">Ajouter</button>
+          </form>
+        </div>
+        <div class="octopus-chef"></div>
+      </div>
+    </div>
   </body>
 </html>
